@@ -5,6 +5,7 @@ import { TodoSearch } from './TodoSearch';
 import { CreateTodoButton } from './CreateTodoButton';
 import React from 'react';
 
+
 const defaultTodo = [
 { text: `no ser joto` ,completed: true },
 { text: `desayunar` ,completed: false },

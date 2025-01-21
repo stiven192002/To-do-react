@@ -1,13 +1,123 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url('C:\Users\stive\React\To-do-react\public\fondo.jpg ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+h1{
+ color: #2C2C2C;
+}
+
+.CreateTodoButton{
+  width: 60px;               /* Ancho del botón */
+  height: 60px;              /* Alto del botón */
+  border-radius: 50%;        /* Hace el botón circular */
+  background-color: #F0F0EC;
+  color: blue;         /* Color de la cruz */
+  border: none;              /* Sin borde */
+  font-size: 30px;           /* Tamaño de la cruz */
+  display: flex;             /* Usamos flexbox para centrar el contenido */
+  justify-content: center;   /* Centra horizontalmente */
+  align-items: center;       /* Centra verticalmente */
+  cursor: pointer;           /* Cambia el cursor a una mano al pasar por encima */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  position: fixed;           /* Fijo respecto a la pantalla */
+  bottom: 20px;              /* Distancia desde la parte inferior */
+  right: 20px;               /* Distancia desde la parte derecha */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+        
+}
+.CreateTodoButton:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+            transform: rotate(200deg); /* Gira el botón */
+}
+
+.TodoSearch{
+  width: 500px;
+height: 50px;
+background-color: #f0f0f0; /* Color de fondo gris claro */
+border: 5px solid #99ccff;
+border-radius: 10px 10px 0 0; /* Esquinas redondeadas solo en la parte superior */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+display: flex; /* Usamos flexbox dentro de la caja */
+justify-content: flex-start;
+align-items: center; /* Asegura que los elementos dentro del contenedor estén centrados verticalmente */
+margin-left: 390px;
+transition: transform 0.3s ease; /* Animación de transición cuando se hace click */
+}
+
+.TodoSearch:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+.TodoSearch:active { 
+
+  transform: scale(0.98); /* Reduce ligeramente el tamaño cuando se hace click */
+}
+
+
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  
+}
+
+.TodoList{
+ 
+margin:0;
+padding: 0 0 56px 0 ;
+list-style:none;
+
+}
+
+.TodoItem {
+  background-color: #FAFAFA;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+}
+.TodoItem-p {
+  margin: 24px 0 24px 24px;
+  width: calc(100% - 120px);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}
+.Icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  /* background-color: #CCC; */
+}
+.Icon-check {
+  position: absolute;
+  left: 12px;
+}
+.Icon-check--active {
+  color: #4caf50;
+}
+.Icon-delete {
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+.Icon-delete:hover {
+  color: red;
 }
